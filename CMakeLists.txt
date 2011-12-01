@@ -85,11 +85,6 @@ endif()
 set(EXTRA_LIBS ${FLTK_LIBRARIES} ${VRPN_SERVER_LIBRARIES} ${WIIUSE_LIBRARIES})
 include_directories(${FLTK_INCLUDE_DIR} ${VRPN_INCLUDE_DIRS})
 
-# Native file chooser
-add_subdirectory(third-party/Fl_Native_File_Chooser-0.86)
-list(APPEND EXTRA_LIBS ${FNFC_LIBRARY})
-include_directories(${FNFC_INCLUDE_DIRS})
-
 # The app is in the "src" subdirectory
 add_subdirectory(src)
 
