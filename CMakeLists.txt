@@ -63,9 +63,7 @@ endif()
 
 find_package(VRPN REQUIRED)
 
-if(NOT APPLE)
-	find_package(WiiUse REQUIRED)
-endif()
+find_package(WiiUse REQUIRED)
 
 # Try to detect linux distribution for better theme selection
 if(NOT WIN32 AND NOT APPLE)
