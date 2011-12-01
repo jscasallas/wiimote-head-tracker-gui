@@ -47,11 +47,7 @@ files for VRPN and this app
 
   - WiiUse - needed for VRPN (GPL3)
 
-  - FLTK 1.1.x and FLUID UI designer/compiler (LGPL2 with exceptions) 
-
-  - Fl_Native_File_Chooser (source included with this package) (LGPL2 with 
-  exceptions) 
-
+  - FLTK 1.3.0 and FLUID UI designer/compiler (LGPL2 with exceptions)
 
 
 License (for tracking module and GUI source)
