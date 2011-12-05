@@ -24,28 +24,17 @@ add_definitions("-DTRACKER_APP_VERSION=\"${CPACK_PACKAGE_VERSION}\"")
 ###
 # Perform build configuration of dependencies
 ###
-
-find_package(Qt4 REQUIRED)
-
-set(BUILD_WIIUSE_SHARED_LIB FALSE)
-add_subdirectory(wiiuse)
-include_directories(${WIIUSE_INCLUDE_DIRS})
-
-set(VRPN_USE_WIIUSE TRUE CACHE INTERNAL "" FORCE)
-set(VRPN_GPL_SERVER ON CACHE INTERNAL "" FORCE)
-set(VRPN_BUILD_SERVER_LIBRARY TRUE CACHE INTERNAL "" FORCE)
-add_subdirectory(vrpn)
-
-set(VRPN_INCLUDE_DIRS "${CMAKE_CURRENT_BINARY_DIR}/vrpn" "${CMAKE_CURRENT_SOURCE_DIR}/vrpn" "${CMAKE_CURRENT_SOURCE_DIR}/vrpn/quat")
-set(VRPN_LIBRARIES vrpnserver)
-set(VRPN_FOUND TRUE)
-add_definitions(-DVRPN_USING_CMAKE)
-
-add_subdirectory(qvrpn)
-
 # Locally-developed modules dist'ed with this app - always have this first.
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 include(UseBackportedModules)
+
+find_package(Qt4 REQUIRED)
+
+find_package(VRPN REQUIRED)
+
+find_package(QVRPN REQUIRED)
+
+find_package(WiiUse REQUIRED)
 
 ###
 # Build the project

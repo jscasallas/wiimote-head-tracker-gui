@@ -28,7 +28,7 @@ add_executable(wiimoteheadtracker
 	MACOSX_BUNDLE
 	${SOURCES}
 	${GENERATED_SOURCES})
-target_link_libraries(wiimoteheadtracker ${VRPN_LIBRARIES} ${QVRPN_LIBRARIES} ${QT_LIBRARIES})
+target_link_libraries(wiimoteheadtracker ${WIIUSE_LIBRARIES} ${VRPN_SERVER_LIBRARIES} ${QVRPN_LIBRARIES} ${QT_LIBRARIES})
 
 if(APPLE)
 	set_target_properties(wiimoteheadtracker
