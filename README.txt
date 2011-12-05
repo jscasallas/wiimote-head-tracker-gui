@@ -34,29 +34,24 @@ Build instructions (primarily tailored toward Linux) can be found in INSTALL.
 The process for Windows is very similar (cmake-gui will probably be more
 comfortable than command line, and you'll get Visual Studio solution files
 to build instead of makefiles).  (Plus, there's binaries for Windows, so
-building isn't as common.)
+building isn't as common.) On Mac, you can get dependencies installed using the unofficial homebrew formulae from http://github.com/jscasallas/homebrew
 
 - CMake 2.6 or newer (the latest version is recommended), to generate build
 files for VRPN and this app
 
 - These dependencies can be built automatically by the build system:
 
-  - VRPN with Ryan's Tracker_WiimoteHead device (19 May 2010 or newer): 
-  VRPN 07.27 might be compatible, VRPN 07.28 will likely be compatible, or 
-  go to http://www.github.com/rpavlik/vrpn (Public domain + BSL 1.0)
+  - VRPN with vrpn_Mainloop*.h (29 Aug 2011 or newer, probably in next major release 2.80?)
 
   - WiiUse - needed for VRPN (GPL3)
 
-  - FLTK 1.1.x and FLUID UI designer/compiler (LGPL2 with exceptions) 
+  - Qt 4
 
-  - Fl_Native_File_Chooser (source included with this package) (LGPL2 with 
-  exceptions) 
-
-
+  - QVRPN: Qt VRPN wrappers
 
 License (for tracking module and GUI source)
 --------------------------------------------
-Copyright Iowa State University 2009-2010
+Copyright Iowa State University 2009-2011
 Distributed under the Boost Software License, Version 1.0.
 (See accompanying file LICENSE_1_0.txt or copy at
 http://www.boost.org/LICENSE_1_0.txt)
