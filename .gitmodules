@@ -7,3 +7,6 @@
 [submodule "wiiuse"]
 	path = wiiuse
 	url = git://github.com/rpavlik/wiiuse.git
+[submodule "cmake"]
+	path = cmake
+	url = https://github.com/rpavlik/cmake-modules.git
